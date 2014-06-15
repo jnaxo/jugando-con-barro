@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="tarea2" default="jar" basedir=".">
+    <description>Tarea 2 Lenguajes de Programación Primer semestre 2014 UTFSM</description>
+    <property name="src" location="src"/>
+    <property name="build" location="build"/>
+    <property name="dist"  location="dist"/>
+    <target name="clean" description="borrar archivos temporales">
+        <delete dir="classes"/>
+    </target>
+    <target name="clobber" depends="clean" description="eliminar todos los archivos jar">
+        <delete file="tarea2.jar"/>
+    </target>
+     <target name="compile" description="compilar el código de la tarea a archivos class">
+        <mkdir dir="classes"/>
+        <javac srcdir="." destdir="classes"/>
+    </target>
+    <target name="jar" depends="compile" description="crear un archivo Jar para la aplicación">
+        <jar destfile="tarea2.jar">
+            <fileset dir="classes" includes="**/*.class"/>
+            <manifest>
+                <attribute name="Main-Class" value="HelloProgram"/>
+            </manifest>
+        </jar>
+    </target>    
+</project>

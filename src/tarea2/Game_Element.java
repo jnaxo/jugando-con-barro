@@ -1,37 +1,46 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tarea2;
 
 import java.awt.Point;
 
 /**
+ * Clase Elemento del juego
  *
- * @author nacho
+ * @author Juan Ignacio Fuentes Quinteros, Rol: 201373067-1
+ * @version 1.1 may 8 2014
  */
 public class Game_Element {
 
     /**
-     * atributos heredables
+     * Nombre del elemento del juego
      */
     protected String name;
+    /**
+     * Posición en el tablero
+     */
     protected Point location;
 
     /**
-     * constructor clase
+     * Constructor Clase
      */
     public Game_Element() {
 
     }
 
+    /**
+     * Obtiene el nombre del elemento
+     * 
+     * @return String con el nombre del elemento
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Obtiene la posición en el trablero del elemento
+     * @return posición "x", posición "y" encapsuladas con la clase Point
+     */
     public Point getLocation() {
         return location;
     }
-    
+
 }
